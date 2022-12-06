@@ -1,0 +1,1 @@
+During the stream on December 6th, 2022 I forgot to implement the `itemComparison` composable. The current solution is provided in the `src/non-composable-solution/` folder and on December 7th, 2022 or December 8th, 2022 the composable solution will be implemented.
