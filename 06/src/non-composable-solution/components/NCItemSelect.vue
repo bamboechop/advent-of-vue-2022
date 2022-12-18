@@ -1,18 +1,14 @@
 <template>
-  <div>
-    <select
-      v-model="selected"
-      class="p-2 border-2 border-gray-dark"
-      :class="{ 'cursor-not-allowed': disabled }"
-      :disabled="disabled">
-      <option disabled value="">Select an item</option>
-      <template
-        v-for="product of products"
-        :key="`product-${product.id}`">
-        <option :value="product">{{ product.id }} - {{ product.title }} - € {{ product.price.toFixed(2) }}</option>
-      </template>
-    </select>
-  </div>
+  <select
+    v-model="selected"
+    class="p-2 border-2 border-gray-dark">
+    <option disabled value="">Select an item</option>
+    <template
+      v-for="product of products"
+      :key="`product-${product.id}`">
+      <option :value="product">{{ product.id }} - {{ product.title }} - € {{ product.price.toFixed(2) }}</option>
+    </template>
+  </select>
 </template>
 
 <script setup>

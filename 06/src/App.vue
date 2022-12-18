@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full flex flex-col gap-5 justify-center items-center">
+  <div class="w-full h-full flex flex-col gap-4 justify-center items-center">
     <h1 class="text-2xl font-bold">Non composable solution</h1>
     <NonComposableSolution />
     <hr class="border-b-8 w-full border-black" />

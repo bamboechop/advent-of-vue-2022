@@ -14,7 +14,7 @@
 <script setup>
 import { ref, watch } from 'vue';
 
-  const props = defineProps({ dummy: Object, selectedProducts: Array });
+  const props = defineProps({ selectedProducts: Array });
 
   const cheapItem = ref(null);
   const expensiveItem = ref(null);

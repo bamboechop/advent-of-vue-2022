@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full flex flex-col gap-5 justify-center items-center">
+  <div class="w-full flex flex-col gap-4 justify-center items-center">
     <h1 class="text-4xl font-bold">Select items to compare</h1>
-    <div class="flex flex-col gap-5 justify-center">
+    <div class="flex flex-col gap-4 justify-center">
       <NCItemSelect
         :products="products"
         @update:selected-product="selectedProducts[0] = $event" />
@@ -20,7 +20,7 @@ import { onMounted, ref } from 'vue';
 import NCItemSelect from '@/non-composable-solution/components/NCItemSelect.vue';
 
 const products = ref([]);
-const selectedProducts = ref([`a`]);
+const selectedProducts = ref([]);
 
 onMounted(async () => {
   try {

@@ -12,24 +12,25 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
-
-  const props = defineProps({ dummy: Object, selectedProducts: Array });
+  import { useItemComparison } from '@/composable-solution/composables/itemComparison';
+  import { ref, watch } from 'vue';
 
   const cheapItem = ref(null);
   const expensiveItem = ref(null);
   const itemAmount = ref(0);
 
-  watch(props.selectedProducts, () => {
-    if(props.selectedProducts.length === 2) {
-      if(props.selectedProducts[0].price < props.selectedProducts[1].price) {
-        cheapItem.value = props.selectedProducts[0];
-        expensiveItem.value = props.selectedProducts[1];
+  const { selectedProducts } = useItemComparison();
+
+  watch(selectedProducts, newValue => {
+    if(newValue.length === 2) {
+      if(newValue[0].price < newValue[1].price) {
+        cheapItem.value = newValue[0];
+        expensiveItem.value = newValue[1];
       } else {
-        cheapItem.value = props.selectedProducts[1];
-        expensiveItem.value = props.selectedProducts[0];
+        cheapItem.value = newValue[1];
+        expensiveItem.value = newValue[0];
       }
       itemAmount.value = Math.round(expensiveItem.value.price / cheapItem.value.price);
     }
-  }, { deep: true });
+  });
 </script>
