@@ -31,4 +31,8 @@ During implementing this challenge I realized a few things.
 
 ## 09
 
-The README.md says `to toggle sorting`, the button should be named `Toggle sort` .. a test case that unsorts the presents after sorting them would be sweet. I understood `toggle` as click the button once, sort the presents and we are done. After checking the solution I figured out what the `computed` should be for, without unsorting the presents again I didn't see a need for a `computed`. :)
+The README.md says `to toggle sorting`, the button should be named `Toggle sort` .. a test case that unsorts the presents after sorting them would be sweet. I understood `toggle` as click the button once, sort the presents, and we are done. After checking the solution I figured out what the `computed` should be for, without unsorting the presents again I didn't see a need for a `computed`. :)
+
+## 10
+
+I can see where the idea of the 10th door is going and this might be something many developers participating enjoy. For me though receiving a completely open "challenge" doesn't pass the challenge character. When signing up I expected to get 24 challenges that clearly tell me what to do, how the end result should look like and maybe some hints on how to get there. Then comes door 10 and tells me "use whatever you want, do whatever you want and implement everything however you want, there is no right or wrong here". I have other projects for that kind of creative freedom so I couldn't really get myself to work on door 10 on stream.
