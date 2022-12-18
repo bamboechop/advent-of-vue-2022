@@ -29,3 +29,6 @@ During implementing this challenge I realized a few things.
    1. The `See things more clearly` section basically is a write-off and doesn't provide any help for getting to the actual solution. Sure, it is nice to understand that `-m-2` is applying a negative margin (and I learnt that CSS classes can start with a `-` which is cool) but by mentioning this class specifically it could feel like it is needed to solve the puzzle. Could be confusing for a beginner.
    2. The `Slots` section is completely useless. I tried to wrap my head around how I could use a slot there to get things working better with the recursion and couldn't find anything. I decided to check out the [2022-recursive-tree-solution](https://github.com/Advent-Of-Vue/2022-recursive-tree-solution/blob/main/src/ChristmasTree.vue) repository to see where it would be used and guess what? There is not a single named slot in the solution.
 
+## 09
+
+The README.md says `to toggle sorting`, the button should be named `Toggle sort` .. a test case that unsorts the presents after sorting them would be sweet. I understood `toggle` as click the button once, sort the presents and we are done. After checking the solution I figured out what the `computed` should be for, without unsorting the presents again I didn't see a need for a `computed`. :)
