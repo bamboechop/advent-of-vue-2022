@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.red-green {
+  background: rgb(21, 202, 130);
+  background: linear-gradient(90deg, rgba(21, 202, 130, 1) 0%, rgba(255, 123, 154, 1) 100%);
+}
+
+.green {
+  background: rgb(116, 214, 128);
+  background: linear-gradient(90deg, rgba(116, 214, 128, 1) 0%, rgba(55, 139, 41, 1) 100%);
+}
+
+.red {
+  background: rgb(255, 0, 0);
+  background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 120, 120, 1) 100%);
+}
+
+/* Inspired by: https://codepen.io/alvarotrigo/pen/PoKMyNO */
+.christmas-text {
+  text-transform: uppercase;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s ease infinite;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  line-height: 3.5rem;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Loading Spinner from https://loading.io/css/ */
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #000;
+  border-color: #000 transparent #000 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loading Spinner from https://loading.io/css/ */
+.lds-circle {
+  display: inline-block;
+  transform: translateZ(1px);
+}
+.lds-circle > div {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  background: #000;
+  animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+@keyframes lds-circle {
+  0%, 100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
+
+/* Stylings for the CustomButton component and v-button directive */
+.custom-button {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color .5s ease-in-out;
+}
+
+.custom-button[disabled] {
+  background-color: #777;
+  cursor: not-allowed;
+}
+
+.custom-button:hover {
+  background-color: #999;
+}
